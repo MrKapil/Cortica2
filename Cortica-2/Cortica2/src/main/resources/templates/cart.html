@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cart</title>
+</head>
+<body>
+<h1>Your Cart</h1>
+<ul>
+<li th:each="item : ${cartItems}">
+<p th:text="${item.product.name}"></p>
+<p th:text="${item.product.description}"></p>
+<p>Quantity: <span th:text="${item.quantity}"></span></p>
+<p>Total: <span th:text="${item.product.price * item.quantity}"></span></p>
+</li>
+</ul>
+</body>
+</html>
